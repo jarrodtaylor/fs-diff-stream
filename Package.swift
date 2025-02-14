@@ -5,6 +5,13 @@ import PackageDescription
 let package = Package(
   name: "FSDiffStream",
   platforms: [.macOS(.v13)],
+
   products: [.library(name: "FSDiffStream", targets: ["FSDiffStream"])],
-  targets: [.target(name: "FSDiffStream")]
+
+  targets:[
+    .target(
+      name: "FSDiffStream",
+      path: ".",
+      exclude: ["README.md"],
+      sources: ["FSDiffStream.swift"])]
 )
